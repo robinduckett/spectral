@@ -12,25 +12,25 @@ It also offers improvements by maintaining a compatible API with phantom's own, 
 # Usage
 
 ```javascript
-    var spectral = require('spectral');
+var spectral = require('spectral');
 
-    var page = spectral.create();
+var page = spectral.create();
 
-    page.settings.userAgent = 'SpecialAgent';
+page.settings.userAgent = 'SpecialAgent';
 
-    page.open('http://www.httpuseragent.org', function (status) {
-        if (status !== 'success') {
-            console.log('Unable to access network');
-        } else {
-            var ua = page.evaluate(function () {
-                return document.getElementById('myagent').textContent;
-            });
+page.open('http://www.httpuseragent.org', function (status) {
+    if (status !== 'success') {
+        console.log('Unable to access network');
+    } else {
+        var ua = page.evaluate(function () {
+            return document.getElementById('myagent').textContent;
+        });
 
-            console.log(ua);
-        }
+        console.log(ua);
+    }
 
-        spectral.exit();
-    });
+    spectral.exit();
+});
 ```
 
 # Usage
