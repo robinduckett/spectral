@@ -11,6 +11,7 @@ It also offers improvements by maintaining a compatible API with phantom's own, 
 
 # Usage
 
+```javascript
     var spectral = require('spectral');
 
     var page = spectral.create();
@@ -30,19 +31,21 @@ It also offers improvements by maintaining a compatible API with phantom's own, 
 
         spectral.exit();
     });
+```
 
 # Usage
+```javascript
+var spectral = require('spectral');
 
-    var spectral = require('spectral');
+var page = spectral.create();
 
-    var page = spectral.create();
-
-    page.open('http://www.sample.com', function() {
-        page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", function() {
-            page.evaluate(function() {
-                $("button").click();
-            });
-
-            spectral.exit()
+page.open('http://www.sample.com', function() {
+    page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", function() {
+        page.evaluate(function() {
+            $("button").click();
         });
+
+        spectral.exit()
     });
+});
+```
