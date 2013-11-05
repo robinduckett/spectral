@@ -49,3 +49,20 @@ page.open('http://www.sample.com', function() {
     });
 });
 ```
+
+# Usage
+```javascript
+
+var spectral = require('spectral');
+
+var page = spectral.create();
+
+page.open('http://www.reddit.com');
+
+page.on('initialised', function() {
+
+});
+
+page.on('loadFinished', function() {
+
+});

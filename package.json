@@ -1,0 +1,36 @@
+{
+  "name": "spectral",
+  "version": "0.0.1",
+  "description": "Better PhantomJS Bridge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinduckett/spectral.git"
+  },
+  "keywords": [
+    "Spectral",
+    "PhantomJS",
+    "Node",
+    "Bridge"
+  ],
+  "author": "Robin Duckett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robinduckett/spectral/issues"
+  },
+  "dependencies": {
+    "phantomjs": "~1.9.2-2",
+    "shoe": "0.0.15",
+    "dnode": "~1.0.5",
+    "winston": "~0.7.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "browserify": "~2.35.1",
+    "grunt-browserify": "~1.2.11",
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}
