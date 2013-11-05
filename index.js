@@ -148,7 +148,11 @@ Spectral.prototype.create = function() {
 };
 
 Spectral.prototype.loadPage = function(url, callback, exit) {
-    this.on('exit', exit);
+    this.on('exit', function(code, signal) {
+        exit(code, signal);
+        
+        this.removeListener('exit', arguments.callee);
+    }.bind(this));
     
     this.create(function(ph) {
         ph.createPage(function(page) {
