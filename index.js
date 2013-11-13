@@ -15,7 +15,7 @@ function Spectral() {
     this.spectres = [];
     
     this.options = {
-        debug: true,
+        debug: false,
         port: 12300
     };
     
@@ -34,9 +34,7 @@ Spectral.prototype.start = function() {
     var phantom = spawn(phantomjs.path, this.processArgs.concat([bridgePath, this.options.port]));
     
     phantom.stdout.on('data', function(chunk) {
-        if (this.options.debug === true) {
-            winston.info('PhantomJS: %s', chunk.toString());
-        }
+        winston.info('PhantomJS: %s', chunk.toString());
     }.bind(this));
     
     phantom.stderr.on('data', function(chunk) {
