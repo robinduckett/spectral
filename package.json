@@ -22,9 +22,9 @@
     "url": "https://github.com/robinduckett/spectral/issues"
   },
   "dependencies": {
+    "dnode": "^1.2.0",
     "phantomjs": "~1.9.2-2",
     "shoe": "0.0.15",
-    "dnode": "~1.0.5",
     "winston": "~0.7.2"
   },
   "devDependencies": {
